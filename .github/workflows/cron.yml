@@ -1,5 +1,11 @@
-name: Push commit
-on: push
+name: Cron Job
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
 jobs:
   report:
     runs-on: ubuntu-latest
